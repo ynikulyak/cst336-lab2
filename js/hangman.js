@@ -1,7 +1,7 @@
 //variables
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 
                 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 
-                'U', 'V', 'W', 'x', 'Y', 'Z'];
+                'U', 'V', 'W', 'X', 'Y', 'Z'];
 var words = [{word: "snake", hint: "It's a reptile"},
              {word: "monkey", hint: "it's a mammal"},
              {word: "beetle", hint: "It's an insect"}];
@@ -36,8 +36,11 @@ function startGame(){
     initBoard();
     
     updateBoard();
-    displayGuessedWords();
 
+    if (sessionStorage.length > 0){
+        displayGuessedWords();
+
+    }
 }
 
 function createLetters(){
@@ -50,6 +53,8 @@ function initBoard(){
     for (var letter in selectedWord){
         board.push("_");
     }
+    $('#hint').append("<button class='btn btn-info btn-lg hint'>Hint" + "</button>");
+
 }
 
 function pickWord(){
@@ -66,8 +71,6 @@ function updateBoard(){
     }
 
     $('#word').append("<br>" + "<br>");
-    $('#word').append("<button class='btn btn-info btn-lg hint'>Hint" + "</button>");
-    
 }
 
 function checkLetter(letter){
@@ -126,8 +129,7 @@ function endGame(win){
 
 function hint(){
     $('.hint').hide();
-
-    $('#word').append("<span class='word_hint'>Hint: " + selectedHint + "</span>");
+    $('#hint').append("<span id='word_hint'>Hint: " + selectedHint + "</span>");
     remainingGuesses -= 1;
 }
 
