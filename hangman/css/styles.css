@@ -1,0 +1,54 @@
+body {
+	background: #E0FFFF !important;
+}
+
+#won, #lost {
+	display: none;
+}
+
+#word {
+	margin-top: 45px;
+	margin-bottom: 45px;
+	font-size: 1.3em;
+}
+
+header h4 {
+	font-style: italic;
+	color: blue;
+}
+
+header h1 {
+	font-family: 'Permanent Marker', cursive;
+}
+
+#letters {
+	margin-top: 20px;
+	margin-bottom: 60px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+button.btn {
+	margin-right: 5px;
+}
+ span.word_hint {
+ 	font-weight: bold;
+ 	font-style: italic;
+ }
+
+ #man {
+ 	border-radius: 7px;
+ 	border: 1px solid black;
+ 	margin: 20px auto;
+ 	width: 600px;
+ 	height: 600px;
+ }
+
+#result {
+	font-style: italic;
+	font-size: 1.4em;
+}
+span#guessed_words {
+	font-style: italic;
+	font-weight: bold;
+}
