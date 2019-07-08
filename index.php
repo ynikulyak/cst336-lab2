@@ -23,6 +23,8 @@
 
             <div id="word">
             </div>
+            <div id="hint">
+            </div>
 
             <div id="letters">
 
